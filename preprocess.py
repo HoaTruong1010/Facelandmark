@@ -69,9 +69,7 @@ if __name__ == "__main__":
                 landmarks.extend([float(xi), float(yi)])
             img, box = detect_face(img_path, mtcnn, landmarks)
             size = 112
-            # new_landmarks = convert_landmarks(landmarks, size, img_resize, box).reshape(-1, 2).tolist()
             new_landmarks = convert_landmarks(landmarks, size, img, box)
-            # print (new_landmarks)
             
             if path.__contains__("test"):
                 with open(f'./new_annotation_test/{str(idx)}.txt', 'w') as f:

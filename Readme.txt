@@ -32,3 +32,7 @@ Thông tin các file/folder có trong project:
     + train_result.png: biểu đồ thể hiện loss ở mỗi epoch khi train.
     + train.py: dùng để train model và lưu checkpoint.
     + utils.py: chứa các hàm hỗ trợ.
+
+- Thứ tự chạy các file để thực hiện train:
+    + Cài đặt file "requirements.txt"
+    + Run file "preprocess.py" -> "train.py"

@@ -9,7 +9,7 @@ import numpy as np
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 #load checkpoint vào model
-checkpoint = torch.load('./checkpoint/checkpoint_epoch_48.pth', map_location=device)
+checkpoint = torch.load('./checkpoint/checkpoint.pth', map_location=device)
 pfld_backbone = PFLDInference().to(device)
 pfld_backbone.load_state_dict(checkpoint)
 

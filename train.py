@@ -99,10 +99,14 @@ if __name__ == '__main__':
             optimizer, mode='min', patience=40, verbose=True)
     losses = []
     val_losses = []
+    min_loss = 100000
     for epoch in range(0, 50):
+
         loss = train(dataloader, pfld_backbone, auxiliarynet, optimizer)
 
-        torch.save(pfld_backbone.state_dict(), f"./checkpoint/checkpoint_epoch_{str(epoch)}.pth")
+        if loss.item() <= min_loss:
+            torch.save(pfld_backbone.state_dict(), f"./checkpoint/checkpoint.pth")
+            min_loss = loss.item()
         print(f"Loss epoch {str(epoch)} is: {loss}")
         losses.append(loss.item())
         val_loss = validate(dataloader_val, pfld_backbone, auxiliarynet)

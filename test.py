@@ -35,7 +35,7 @@ def compute_nme(preds, target):
 
     for i in range(N):
         pts_pred, pts_gt = preds[i, ], target[i, ]
-        interocular = np.linalg.norm(pts_gt[136, ] - pts_gt[116, ])
+        interocular = np.linalg.norm(pts_gt[116, ] - pts_gt[136, ])
         rmse[i] = np.sum(np.linalg.norm(pts_pred - pts_gt,
                                         axis=1)) / (interocular * L)
 
@@ -115,7 +115,7 @@ def main(args):
 def parse_args():
     parser = argparse.ArgumentParser(description='Testing')
     parser.add_argument('--model_path',
-                        default="./checkpoint/checkpoint_epoch_48.pth",
+                        default="./checkpoint/checkpoint.pth",
                         type=str)
     parser.add_argument('--test_dataset',
                         default='./new_list_test.txt',
