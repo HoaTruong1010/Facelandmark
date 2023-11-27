@@ -36,3 +36,7 @@ Thông tin các file/folder có trong project:
 - Thứ tự chạy các file để thực hiện train:
     + Cài đặt file "requirements.txt"
     + Run file "preprocess.py" -> "train.py"
+
+- Thứ tự chạy các file để thực hiện test:
+    + Cài đặt file "requirements.txt" (nếu trước đó chưa cài)
+    + Run file "preprocess.py" (nếu trước đó chưa run) -> "test.py"
