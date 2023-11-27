@@ -27,7 +27,7 @@ Thông tin các file/folder có trong project:
     + new_list_train.txt: chứa đường dẫn đến file .txt trong foler new_annotation_train.
     + new_list_val.txt: chứa đường dẫn đến file .txt trong foler new_annotation_val.
     + preprocess.py: dùng để chuẩn bị dữ liệu là các khuôn mặt và landmarks tương ứng.
-    + test.py: dùng để test pre-train model và đánh giá loss.
+    + test.py: dùng để test pre-train model và đánh giá error.
     + test1pic.py: dùng để test và plot để kiểm tra tính chính xác.
     + train_result.png: biểu đồ thể hiện loss ở mỗi epoch khi train.
     + train.py: dùng để train model và lưu checkpoint.
